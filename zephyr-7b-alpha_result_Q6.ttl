@@ -1,0 +1,140 @@
+```
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# namespace for the drinking water distribution network ontology
+@prefix dwdn: <http://example.org/ontology/dwdn#> .
+
+# namespace for the RDFS vocabulary
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# namespace for the XSD datatypes
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# define the drinking water distribution network ontology
+
+# Pipe hasPart Reservoir
+dwdn:Pipe a rdfs:Class .
+dwdn:Reservoir a rdfs:Class .
+dwdn:hasPart a rdf:Property ;
+    rdfs:domain dwdn:Pipe ;
+    rdfs:range dwdn:Reservoir ;
+    rdfs:subPropertyOf rdfs:member .
+
+# Pipe hasPart Valve
+dwdn:Valve a rdfs:Class .
+dwdn:hasPart a rdf:Property ;
+    rdfs:domain dwdn:Pipe ;
+    rdfs:range dwdn:Valve ;
+    rdfs:subPropertyOf rdfs:member .
+
+# Pump hasPart Motor
+dwdn:Pump a rdfs:Class .
+dwdn:hasPart a rdf:Property ;
+    rdfs:domain dwdn:Pump ;
+    rdfs:range dwdn:Motor ;
+    rdfs:subPropertyOf rdfs:member .
+
+# Valve hasPart Seat
+dwdn:Seat a rdfs:Class .
+dwdn:hasPart a rdf:Property ;
+    rdfs:domain dwdn:Valve ;
+    rdfs:range dwdn:Seat ;
+    rdfs:subPropertyOf rdfs:member .
+
+# Valve hasPart Stem
+dwdn:Stem a rdfs:Class .
+dwdn:hasPart a rdf:Property ;
+    rdfs:domain dwdn:Valve ;
+    rdfs:range dwdn:Stem ;
+    rdfs:subPropertyOf rdfs:member .
+
+# Valve hasPart Disc
+dwdn:Disc a rdfs:Class .
+dwdn:hasPart a rdf:Property ;
+    rdfs:domain dwdn:Valve ;
+    rdfs:range dwdn:Disc ;
+    rdfs:subPropertyOf rdfs:member .
+
+# Valve hasPart Lever
+dwdn:Lever a rdfs:Class .
+dwdn:hasPart a rdf:Property ;
+    rdfs:domain dwdn:Valve ;
+    rdfs:range dwdn:Lever ;
+    rdfs:subPropertyOf rdfs:member .
+
+# Tank hasPart Water
+dwdn:Water a rdfs:Class ;
+    rdfs:subClassOf xsd:string .
+dwdn:hasPart a rdf:Property ;
+    rdfs:domain dwdn:Tank ;
+    rdfs:range dwdn:Water ;
+    rdfs:subPropertyOf rdfs:member .
+
+# PRV hasPart Valve
+dwdn:PRV a rdfs:Class .
+dwdn:hasPart a rdf:Property ;
+    rdfs:domain dwdn:PRV ;
+    rdfs:range dwdn:Valve ;
+    rdfs:subPropertyOf rdfs:member .
+
+# Meter hasPart Gear
+dwdn:Gear a rdfs:Class .
+dwdn:hasPart a rdf:Property ;
+    rdfs:domain dwdn:Meter ;
+    rdfs:range dwdn:Gear ;
+    rdfs:subPropertyOf rdfs:member .
+
+# Fire Hydrant hasPart Pipe
+dwdn:FireHydrant a rdfs:Class .
+dwdn:hasPart a rdf:Property ;
+    rdfs:domain dwdn:FireHydrant ;
+    rdfs:range dwdn:Pipe ;
+    rdfs:subPropertyOf rdfs:member .
+
+# Manhole hasPart Frame
+dwdn:ManholeFrame a rdfs:Class .
+dwdn:hasPart a rdf:Property ;
+    rdfs:domain dwdn:Manhole ;
+    rdfs:range dwdn:ManholeFrame ;
+    rdfs:subPropertyOf rdfs:member .
+
+# Manhole hasPart Cover
+dwdn:ManholeCover a rdfs:Class .
+dwdn:hasPart a rdf:Property ;
+    rdfs:domain dwdn:Manhole ;
+    rdfs:range dwdn:ManholeCover ;
+    rdfs:subPropertyOf rdfs:member .
+
+# Junction hasPart Pipe
+dwdn:Junction a rdfs:Class .
+dwdn:hasPart a rdf:Property ;
+    rdfs:domain dwdn:Junction ;
+    rdfs:range dwdn:Pipe ;
+    rdfs:subPropertyOf rdfs:member .
+
+# Examples of using the ontology
+
+# Example 1: A pipe with a reservoir at the beginning and a valve in the middle
+@prefix dwdn: <http://example.org/ontology/dwdn#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology/dwdn#Pipe_1>
+    a dwdn:Pipe ;
+    dwdn:hasPart <http://example.org/ontology/dwdn#Reservoir_1> ;
+    dwdn:hasPart <http://example.org/ontology/dwdn#Valve_2> ;
+    rdfs:label "Pipe 1" .
+
+<http://example.org/ontology/dwdn#Reservoir_1>
+    a dwdn:Reservoir ;
+    rdfs:label "Reservoir 1" .
+
+<http://example.org/ontology/dwdn#Valve_2>
+    a dwdn:Valve ;
+    rdfs:label "Valve 2" .
+```
+
+Note: This is just an example of how to use the ontology. The actual implementation may vary depending on the specific requirements of the project.

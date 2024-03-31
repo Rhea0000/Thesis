@@ -1,0 +1,82 @@
+Here's the complete final Turtle syntax:
+
+```turtle
+@prefix : <http://www.example.org/water-distribution-network#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:Pipe a rdf:type :WaterDistributionNetworkPart ;
+      rdfs:label "Pipe" .
+
+:Reservoir a rdf:type :WaterDistributionNetworkPart ;
+      rdfs:label "Reservoir" .
+
+:PumpingStation a rdf:type :WaterDistributionNetworkPart ;
+      rdfs:label "PumpingStation" .
+
+:Valve a rdf:type :WaterDistributionNetworkPart ;
+      rdfs:label "Valve" .
+
+:Manhole a rdf:type :UndergroundWaterDistributionNetworkPart ;
+      rdfs:label "Manhole" .
+
+:Hydrant a rdf:type :WaterDistributionNetworkPart ;
+      rdfs:label "Hydrant" .
+
+:WaterTreatmentPlant a rdf:type rdf:nil ;
+      rdfs:label "WaterTreatmentPlant" ;
+      :isNotAPartOfWaterDistributionNetwork rdf:true .
+
+:isNotAPartOfWaterDistributionNetwork a rdf:type rdf:Property ;
+      rdfs:domain :WaterDistributionNetworkPart ;
+      rdfs:range rdf:boolean .
+
+:pipe {
+  :CP "Material" ;
+      :AP "mm" ;
+      :AP "m" ;
+      :RP :ConnectionPoint .
+  :CP "Material" ;
+      :AP "mm" ;
+      :AP "m" ;
+      :RP :ConnectionPoint ;
+      :RP :Location .
+} .
+
+:reservoir {
+  :CP "StorageCapacity" ;
+      :CP "Location" .
+  :CP "StorageCapacity" ;
+      :CP "Location" ;
+      :RP :Address .
+} .
+
+:pumpingStation {
+  :CP "Location" ;
+      :CP "OperationStatus" ;
+      :CP "WaterSource" .
+} .
+
+:valve {
+  :CP "ControlMechanism" ;
+      :AP "FlowRate" ;
+      :AP "Position" ;
+      :RP :ConnectionPoint .
+} .
+
+:manhole {
+  :CP "Accessibility" ;
+      :CP "Location" .
+} .
+
+:hydrant {
+  :CP "Purpose" ;
+      :AP "Material" ;
+      :AP "Color" ;
+      :AP "FlowRate" ;
+      :RP :Location ;
+      :RP :Owner .
+} .
+```
+
+This Turtle syntax defines the classes and properties for each input entity, as well as their relationships and attributes. The `:pipe` class represents a pipe in the water distribution network, and it has properties for material, diameter, length, and connection points. The `:reservoir` class represents a water storage facility, and it has properties for storage capacity and location. The `:pumpingStation` class represents a water pumping station, and it has properties for location, operation status, and water source. The `:valve` class represents a valve in the water distribution network, and it has properties for control mechanism, flow rate, position, and connection points. The `:manhole` class represents a manhole in the underground water distribution network, and it has properties for accessibility and location. The `:hydrant` class represents a firefighting connection point device, and it has properties for purpose (firefighting), material (metal or plastic), color (red or yellow), flow rate, location, and owner (fire department). The `:WaterTreatmentPlant` class is not a part of the water distribution network, but it has a property to indicate that it is not a part of the water distribution network. The Turtle syntax also includes a property called `:isNotAPartOfWaterDistributionNetwork`, which has a domain of `:WaterDistributionNetworkPart` and a range of `rdf:boolean`. This property can be used to indicate that an entity is not a part of the water distribution network, which is useful for entities like water treatment plants that are related to the water distribution network but are not physically a part of it.

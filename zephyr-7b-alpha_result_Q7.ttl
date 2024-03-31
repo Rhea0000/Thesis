@@ -1,0 +1,15 @@
+<http://example.org/ontology/dwdn#Pipe_1>
+    a dwdn:Pipe ;
+    dwdn:hasPart <http://example.org/ontology/dwdn#Reservoir_1> ;
+    dwdn:hasPart <http://example.org/ontology/dwdn#Valve_2> ;
+    rdfs:label "Pipe 1" .
+
+<http://example.org/ontology/dwdn#Reservoir_1>
+    a dwdn:Reservoir ;
+    rdfs:label "Reservoir 1" .
+
+<http://example.org/ontology/dwdn#Valve_2>
+    a dwdn:Valve ;
+    rdfs:label "Valve 2" .
+
+The above Turtle syntax represents a pipe (<http://example.org/ontology/dwdn#Pipe_1>) that has a reservoir (<http://example.org/ontology/dwdn#Reservoir_1>) at the beginning and a valve (<http://example.org/ontology/dwdn#Valve_2>) in the middle. The rdfs:label property is used to provide a human-readable label for each resource (<http://example.org/ontology/dwdn#Pipe_1>, <http://example.org/ontology/dwdn#Reservoir_1>, <http://example.org/ontology/dwdn#Valve_2>).

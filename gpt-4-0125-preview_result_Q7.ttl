@@ -1,0 +1,127 @@
+```turtle
+@prefix dwdn: <http://example.org/drinking_water_distribution_network/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+dwdn:DrinkingWaterDistributionNetwork rdf:type rdfs:Class .
+
+dwdn:Reservoir rdf:type rdfs:Class ;
+               rdfs:subClassOf dwdn:DrinkingWaterDistributionNetwork .
+
+dwdn:PumpStation rdf:type rdfs:Class ;
+                 rdfs:subClassOf dwdn:DrinkingWaterDistributionNetwork .
+
+dwdn:WaterTower rdf:type rdfs:Class ;
+                rdfs:subClassOf dwdn:DrinkingWaterDistributionNetwork .
+
+dwdn:Pipes rdf:type rdfs:Class ;
+           rdfs:subClassOf dwdn:DrinkingWaterDistributionNetwork .
+
+dwdn:Valves rdf:type rdfs:Class ;
+            rdfs:subClassOf dwdn:DrinkingWaterDistributionNetwork .
+
+dwdn:Hydrants rdf:type rdfs:Class ;
+              rdfs:subClassOf dwdn:DrinkingWaterDistributionNetwork .
+
+dwdn:Meters rdf:type rdfs:Class ;
+            rdfs:subClassOf dwdn:DrinkingWaterDistributionNetwork .
+
+dwdn:Fittings rdf:type rdfs:Class ;
+              rdfs:subClassOf dwdn:DrinkingWaterDistributionNetwork .
+
+dwdn:WaterMain rdf:type rdfs:Class ;
+               rdfs:subClassOf dwdn:DrinkingWaterDistributionNetwork .
+
+dwdn:ServiceLine rdf:type rdfs:Class ;
+                 rdfs:subClassOf dwdn:DrinkingWaterDistributionNetwork .
+
+dwdn:BackflowPreventer rdf:type rdfs:Class ;
+                       rdfs:subClassOf dwdn:DrinkingWaterDistributionNetwork .
+
+dwdn:PressureRegulator rdf:type rdfs:Class ;
+                        rdfs:subClassOf dwdn:DrinkingWaterDistributionNetwork .
+
+# Additional properties and relationships as per input entities and their synonyms, taxonomy, and predication
+
+# Reservoir
+dwdn:Reservoir rdfs:label "Water storage tank", "Aqueduct" ;
+               dwdn:capacity "AP" ;
+               dwdn:waterType "AP" ;
+               dwdn:location "AP" ;
+               dwdn:purpose "RP" .
+
+# Pump Station
+dwdn:PumpStation rdfs:label "Water Pumping Station", "Booster Station" ;
+                 dwdn:location "AP" ;
+                 dwdn:capacity "AP" ;
+                 dwdn:operationalStatus "AP" ;
+                 dwdn:equipmentList "CP" ;
+                 dwdn:maintenanceSchedule "CP" ;
+                 dwdn:waterSource "RP" .
+
+# Water Tower
+dwdn:WaterTower rdfs:label "Water Storage Tower", "Elevated Water Tank" ;
+                dwdn:height "AP" ;
+                dwdn:water_storage_capacity "AP" ;
+                dwdn:pressurization_ability "AP" .
+
+# Pipes
+dwdn:Pipes rdfs:label "Water conduits", "Aqueducts" ;
+           dwdn:material "AP" ;
+           dwdn:diameter "AP" ;
+           dwdn:length "AP" ;
+           dwdn:location "RP" .
+
+# Valves
+dwdn:Valves rdfs:label "Tap", "Stopcock" ;
+            dwdn:function "CP" ;
+            dwdn:type "AP" ;
+            dwdn:location "RP" .
+
+# Hydrants
+dwdn:Hydrants rdfs:label "fire hydrant", "fire plug" ;
+              dwdn:location "AP" ;
+              dwdn:water_pressure "AP" ;
+              dwdn:accessible "AP" ;
+              dwdn:maintenance_schedule "CP" ;
+              dwdn:connected_water_main "RP" .
+
+# Meters
+dwdn:Meters rdfs:label "Water Consumption Meters", "Flow Meters" ;
+            dwdn:volumeMeasured "AP" ;
+            dwdn:installationLocation "RP" ;
+            dwdn:readingsFrequency "AP" .
+
+# Fittings
+dwdn:Fittings rdfs:label "Connectors", "Joint components" ;
+              dwdn:material "AP" ;
+              dwdn:diameter "AP" ;
+              dwdn:connectionType "AP" .
+
+# Water Main
+dwdn:WaterMain rdfs:label "Distribution Pipe", "Main Line" ;
+               dwdn:material "AP" ;
+               dwdn:diameter "AP" ;
+               dwdn:length "AP" ;
+               dwdn:location "CP" ;
+               dwdn:pressureRating "AP" ;
+               dwdn:installationDate "AP" .
+
+# Service Line
+dwdn:ServiceLine rdfs:label "supply line", "connection pipe" ;
+                 dwdn:diameter "AP" ;
+                 dwdn:material "AP" ;
+                 dwdn:length "AP" ;
+                 dwdn:connectsTo "RP" .
+
+# Backflow Preventer
+dwdn:BackflowPreventer rdfs:label "Backwater Valve", "Check Valve" ;
+                       dwdn:function "prevent reverse water flow" ;
+                       dwdn:location "water distribution system" ;
+                       dwdn:type "mechanical device" .
+
+# Pressure Regulator
+dwdn:PressureRegulator rdfs:label "Pressure Relief Valve", "Pressure Control Valve" ;
+                        dwdn:flow_cutoff_pressure "AP" ;
+                        dwdn:system_pressure_maintenance "AP" .
+```
