@@ -54,7 +54,6 @@ For further assistance, please open an issue in this repository.
 @misc{OpenSourceLLMs,
   title = {OpenSourceLLMs},
   year = {2024},
-  howpublished = {\url{https://colab.research.google.com/drive/1cW01yqNxKqYHpU7uvi5UfUsNnbfxVw7R}},
+  url = {\url{https://colab.research.google.com/drive/1cW01yqNxKqYHpU7uvi5UfUsNnbfxVw7R}},
   note = {Accessed: 2024-04-14}
 }
-
