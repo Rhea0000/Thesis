@@ -26,7 +26,7 @@ Before running the code, ensure you have the following files:
 - `Document_Input`
 - `Thesis_code.py`
 
-You do not need to execute `Parameters.yaml` and `Document_Input`, but they are required for the `Thesis_code.py`.
+You do not need to execute `Parameters.yaml` and `Document_Input` unless you want to change the parameters and input, they are required for the `Thesis_code.py`.
 
 ## Configuration
 
@@ -51,4 +51,10 @@ If you encounter a 500 server error, it may indicate that the LLM is unable to p
 For further assistance, please open an issue in this repository.
 
 # Reference
+@misc{OpenSourceLLMs,
+  title = {OpenSourceLLMs},
+  year = {2024},
+  howpublished = {\url{https://colab.research.google.com/drive/1cW01yqNxKqYHpU7uvi5UfUsNnbfxVw7R}},
+  note = {Accessed: 2024-04-14}
+}
 
