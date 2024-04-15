@@ -4,6 +4,9 @@ This Github repository is created for the Master thesis project – Creating ont
 # Introduction
 The LLM plays an important role in AI development, it offers a great convenience in the Natural Language Processing task such as text summarization. The ontology construction could be considered as time consuming, therefore using LLM for the ontology learning should be explored. This project leverages RAG for ontology learning in the drinking water domain. The output for each model is available at "Output" folder. 
 
+The Excel file for progress review: (SLR + Result)
+https://docs.google.com/spreadsheets/d/15oEyAJER5Bi6Z1DWzoBaYncC4WItkFLvczZcJxmFTug/edit#gid=1494574796
+
 Below is a flowchart visualize the logic behind the code:
 
 ![FLOWCHART3 0](https://github.com/Rhea0000/Thesis/assets/145769931/33e57c24-e540-4ebf-84c2-498b19fab30d)
