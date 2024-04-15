@@ -39,7 +39,7 @@ All default parameters are stored in `Parameters.yaml`. If you need to adjust qu
 
 To run the code:
 1. Open `Thesis_code.py` in Visual Studio Code.
-2. Install any missing packages prompted by the IDE.
+2. Install any missing packages if necessary.
 3. Replace the default file locations for `Parameters.yaml` and `Document_Input` at lines 47 and 90 with the paths to your files.
 4. Input your API key for OpenAI, Hugging Face, or another compatible platform for your LLM.
 5. Define your embedding models and LLM in the code.
