@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dwdn: <http://www.example.org/dwdn#> .
+
+dwdn:DrinkingWaterDistributionNetwork rdf:type owl:Class .
+dwdn:Pipes rdf:type owl:Class;
+    rdfs:subClassOf dwdn:DrinkingWaterDistributionNetwork.
+dwdn:Valves rdf:type owl:Class;
+    rdfs:subClassOf dwdn:DrinkingWaterDistributionNetwork.
+dwdn:Pumps rdf:type owl:Class;
+    rdfs:subClassOf dwdn:DrinkingWaterDistributionNetwork.
+dwdn:StorageTanks rdf:type owl:Class;
+    rdfs:subClassOf dwdn:DrinkingWaterDistributionNetwork.
+dwdn:Reservoirs rdf:type owl:Class;
+    rdfs:subClassOf dwdn:DrinkingWaterDistributionNetwork.
+dwdn:PressureReducingValves rdf:type owl:Class;
+    rdfs:subClassOf dwdn:DrinkingWaterDistributionNetwork.
+dwdn:Meters rdf:type owl:Class;
+    rdfs:subClassOf dwdn:DrinkingWaterDistributionNetwork.
