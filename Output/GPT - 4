@@ -1,0 +1,70 @@
+# Define prefixes
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dw: <http://example.org/ontology/drinkingwater#> .
+
+# Create classes
+dw:DrinkingWaterDistributionNetwork rdf:type owl:Class .
+dw:Pipes rdf:type owl:Class .
+dw:Valves rdf:type owl:Class .
+dw:Pumps rdf:type owl:Class .
+dw:Reservoirs rdf:type owl:Class .
+dw:WaterMeters rdf:type owl:Class .
+dw:FireHydrants rdf:type owl:Class .
+dw:TreatmentPlants rdf:type owl:Class .
+dw:ServiceConnections rdf:type owl:Class .
+dw:BackflowPreventers rdf:type owl:Class .
+dw:PressureRegulators rdf:type owl:Class .
+dw:WaterTowers rdf:type owl:Class .
+dw:Manholes rdf:type owl:Class .
+dw:Fittings rdf:type owl:Class .
+
+# Organize classes hierarchically using subclass relationships
+dw:Pipes rdfs:subClassOf dw:DrinkingWaterDistributionNetwork .
+dw:Valves rdfs:subClassOf dw:Pipes .
+dw:Pumps rdfs:subClassOf dw:DrinkingWaterDistributionNetwork .
+dw:Reservoirs rdfs:subClassOf dw:DrinkingWaterDistributionNetwork .
+dw:WaterMeters rdfs:subClassOf dw:ServiceConnections .
+dw:FireHydrants rdfs:subClassOf dw:DrinkingWaterDistributionNetwork .
+dw:TreatmentPlants rdfs:subClassOf dw:DrinkingWaterDistributionNetwork .
+dw:ServiceConnections rdfs:subClassOf dw:DrinkingWaterDistributionNetwork .
+dw:BackflowPreventers rdfs:subClassOf dw:ServiceConnections .
+dw:PressureRegulators rdfs:subClassOf dw:ServiceConnections .
+dw:WaterTowers rdfs:subClassOf dw:DrinkingWaterDistributionNetwork .
+dw:Manholes rdfs:subClassOf dw:DrinkingWaterDistributionNetwork .
+dw:Fittings rdfs:subClassOf dw:Pipes .
+
+# Equivalent Classes
+dw:Tubing rdf:type owl:Class ; owl:equivalentClass dw:Pipes .
+dw:Conduits rdf:type owl:Class ; owl:equivalentClass dw:Pipes .
+dw:Regulators rdf:type owl:Class ; owl:equivalentClass dw:Valves .
+dw:GateValves rdf:type owl:Class ; owl:equivalentClass dw:Valves .
+dw:WaterStorageTanks rdf:type owl:Class ; owl:equivalentClass dw:Reservoirs .
+dw:HoldingTanks rdf:type owl:Class ; owl:equivalentClass dw:Reservoirs .
+dw:FlowMeters rdf:type owl:Class ; owl:equivalentClass dw:WaterMeters .
+dw:UsageMeters rdf:type owl:Class ; owl:equivalentClass dw:WaterMeters .
+
+# Define properties
+dw:MaterialComposition rdf:type owl:ObjectProperty .
+dw:DiameterRange rdf:type owl:ObjectProperty .
+dw:Length rdf:type owl:ObjectProperty .
+dw:InstallationDate rdf:type owl:DatatypeProperty .
+dw:ConnectedToValves rdf:type owl:ObjectProperty .
+dw:ConnectedToPumps rdf:type owl:ObjectProperty .
+dw:Type rdf:type owl:ObjectProperty .
+dw:SizeSpecification rdf:type owl:ObjectProperty .
+dw:Manufacturer rdf:type owl:ObjectProperty .
+dw:ModelNumber rdf:type owl:DatatypeProperty .
+dw:InstalledOnPipes rdf:type owl:ObjectProperty .
+dw:Capacity rdf:type owl:ObjectProperty .
+dw:Location rdf:type owl:ObjectProperty .
+dw:ConstructionMaterial rdf:type owl:ObjectProperty .
+dw:YearBuilt rdf:type owl:DatatypeProperty .
+dw:SuppliesWaterToTreatmentPlants rdf:type owl:ObjectProperty .
+dw:ReceivesWaterFromPumps rdf:type owl:ObjectProperty .
+dw:ReadoutType rdf:type owl:ObjectProperty .
+dw:MeasurementRange rdf:type owl:ObjectProperty .
+dw:SerialNumber rdf:type owl:DatatypeProperty .
+dw:MeasuresConsumptionForServiceConnections rdf:type owl:ObjectProperty .
+dw:MonitoredByUtilityCompanies rdf:type owl:ObjectProperty .
