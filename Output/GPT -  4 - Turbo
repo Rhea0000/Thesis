@@ -1,0 +1,141 @@
+# Define prefixes
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://example.org/ontology#> .
+
+# Create classes
+ex:WaterDistributionNetwork rdf:type owl:Class .
+ex:Pipe rdf:type owl:Class .
+ex:Pump rdf:type owl:Class .
+ex:Valve rdf:type owl:Class .
+ex:Reservoir rdf:type owl:Class .
+ex:WaterTower rdf:type owl:Class .
+ex:Meter rdf:type owl:Class .
+ex:Hydrant rdf:type owl:Class .
+ex:PressureRegulator rdf:type owl:Class .
+ex:BackflowPreventer rdf:type owl:Class .
+ex:ServiceLine rdf:type owl:Class .
+
+# Define equivalent classes based on synonyms
+ex:Conduit rdf:type owl:Class ;
+    owl:equivalentClass ex:Pipe.
+ex:Tubing rdf:type owl:Class ;
+    owl:equivalentClass ex:Pipe.
+ex:WaterPump rdf:type owl:Class ;
+    owl:equivalentClass ex:Pump.
+ex:FlowRegulator rdf:type owl:Class ;
+    owl:equivalentClass ex:Valve.
+ex:WaterStorage rdf:type owl:Class ;
+    owl:equivalentClass ex:Reservoir.
+ex:ElevatedWaterTank rdf:type owl:Class ;
+    owl:equivalentClass ex:WaterTower.
+ex:WaterMeter rdf:type owl:Class ;
+    owl:equivalentClass ex:Meter.
+ex:FlowMeter rdf:type owl:Class ;
+    owl:equivalentClass ex:Meter.
+ex:FireHydrant rdf:type owl:Class ;
+    owl:equivalentClass ex:Hydrant.
+ex:PressureControlValve rdf:type owl:Class ;
+    owl:equivalentClass ex:PressureRegulator.
+ex:BackflowControlDevice rdf:type owl:Class ;
+    owl:equivalentClass ex:BackflowPreventer.
+ex:DistributionLine rdf:type owl:Class ;
+    owl:equivalentClass ex:ServiceLine.
+
+# Define taxonomy relationships
+ex:Pipe rdfs:subClassOf ex:WaterTransportInfrastructure.
+ex:Pump rdfs:subClassOf ex:FluidMovementDevice.
+ex:Valve rdfs:subClassOf ex:FlowControlDevice.
+ex:Reservoir rdfs:subClassOf ex:WaterSupplySource.
+ex:WaterTower rdfs:subClassOf ex:WaterStorageStructure.
+ex:Meter rdfs:subClassOf ex:MeasurementDevice.
+ex:Hydrant rdfs:subClassOf ex:EmergencyWaterAccessPoint.
+ex:PressureRegulator rdfs:subClassOf ex:PressureManagementDevice.
+ex:BackflowPreventer rdfs:subClassOf ex:WaterSafetyDevice.
+ex:ServiceLine rdfs:subClassOf ex:WaterDistributionInfrastructure.
+
+# Define properties
+ex:Material rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Pipe, ex:ServiceLine.
+ex:Diameter rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Pipe, ex:ServiceLine.
+ex:Length rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Pipe.
+ex:InstallationInformation rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Pipe.
+ex:ConnectedToPump rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Pipe.
+ex:ConnectedToValve rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Pipe.
+ex:Type rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Pump, ex:Valve, ex:BackflowPreventer.
+ex:Capacity rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Pump, ex:Reservoir, ex:WaterTower.
+ex:PowerSource rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Pump.
+ex:OperationalStatus rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Pump.
+ex:InstalledAtReservoir rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Pump.
+ex:SuppliesWaterTower rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Pump.
+ex:Size rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Valve, ex:Hydrant.
+ex:MaintenanceHistory rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Valve.
+ex:InstalledOnPipe rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Valve.
+ex:Area rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Reservoir.
+ex:Depth rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Reservoir.
+ex:WaterQualityInformation rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Reservoir.
+ex:FeedsWaterTower rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Reservoir.
+ex:SuppliedByPump rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Reservoir.
+ex:Height rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:WaterTower.
+ex:StructuralIntegrityDetails rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:WaterTower.
+ex:SupportedByPump rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:WaterTower.
+ex:RegulatesPressureToServiceLine rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:WaterTower.
+ex:Model rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Meter.
+ex:MeasurementAccuracy rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Meter.
+ex:LastCalibrationDate rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Meter.
+ex:UsageDataRecording rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Meter.
+ex:AttachedToServiceLine rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Meter.
+ex:Location rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:Hydrant.
+ex:AccessibilityStatus rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Hydrant.
+ex:ConnectedToWaterMain rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:Hydrant.
+ex:SetPressure rdf:type owl:DatatypeProperty ;
+ex:Adjustability rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:PressureRegulator.
+ex:OperationalCondition rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:PressureRegulator.
+ex:InstalledOnServiceLine rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:PressureRegulator, ex:BackflowPreventer.
+ex:AssociatedWithMeter rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:PressureRegulator.
+ex:InstallationDate rdf:type owl:DatatypeProperty ;
+    rdfs:domain ex:BackflowPreventer.
+ex:CertificationDetails rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:BackflowPreventer.
+ex:InstallationDateInformation rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:ServiceLine.
+ex:ConnectsToMeter rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:ServiceLine.
+ex:ConnectsToBuilding rdf:type owl:ObjectProperty ;
+    rdfs:domain ex:ServiceLine.
