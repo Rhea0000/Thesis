@@ -11,22 +11,6 @@ Temperature: 0.5
 Chunk_size: 256
 Chunk_overlap: 20
 
-# document_path: r"C:\Users\y1kel\Documents\Master IS\Thesis\Dataset\Input_document.pdf"
-
-#LLM models
-# llm= HuggingFaceHub(
-#     repo_id="huggingfaceh4/zephyr-7b-alpha",
-#     model_kwargs={"temperature": 0.5, "max_length": Max_length,"max_new_tokens":Max_new_totkens}
-# )
-
-# llm= HuggingFaceHub(
-#     repo_id="huggingfaceh4/zephyr-7b-beta",
-#     model_kwargs={"temperature": 0.5, "max_length": Max_length,"max_new_tokens":Max_new_totkens}
-# )
-
-# llm= ChatOpenAI(model_name="gpt-4-0125-preview", temperature=0.5)
-#  llm: ChatOpenAI(model_name="gpt-3.5-turbo-0125", temperature=0.5)
-
 #System template
 template: |
   You are an AI assistant that follows instruction extremely well. Please give direct and complete answers. Please be truthful, if you don't know the answer, just say that you don't know, don't try to make up an answer or return the wrong answer.
