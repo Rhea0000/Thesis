@@ -9,7 +9,7 @@ https://docs.google.com/spreadsheets/d/15oEyAJER5Bi6Z1DWzoBaYncC4WItkFLvczZcJxmF
 
 Below is a flowchart visualize the logic behind the code:
 
-![FLOWCHART3 0](https://github.com/Rhea0000/Thesis/assets/145769931/33e57c24-e540-4ebf-84c2-498b19fab30d)
+![FLOWCHART3 0](![FLOWCHART 3](https://github.com/Rhea0000/Thesis/assets/145769931/414089a1-4931-483e-abdb-2ea7310006ee))
 
 # Instructions
 The file "Python code" contains all the information for the reuse. 
