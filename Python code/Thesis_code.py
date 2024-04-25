@@ -65,12 +65,8 @@ if __name__ == '__main__':
 
 
 #Set up the enviroment for KEYs
-# OpenAI_API_KEY=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
-# HUGGINGFACEHUB_API_TOKEN = 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 / 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
 os.environ['OPENAI_API_KEY'] = input("Enter the key:")
-
-HF_Token = "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"
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = HF_Token
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = input("Enter the key:")
 
 #Model selections
 #Select the embeddings models. Embeddings create a vector representation of a piece of text. 
