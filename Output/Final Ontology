@@ -14,7 +14,51 @@
 @prefix qu-rec20: <http://purl.org/NET/ssnx/qu/qu-rec20#> .
 @base <http://purl.oclc.org/NET/UNIS/fiware/iot-lite#> .
 
+:VirtualEntity rdf:type owl:Class ;
+               
+               rdfs:subClassOf :Entity ;
+               
+               rdfs:comment """Computational or data element representing a Physical Entity. Virtual Entities can be either Active or Passive Digital Entities.
+ssn:System rdf:type owl:Class .
+
+ssn:Device rdf:type owl:Class ;
+           
+           rdfs:subClassOf ssn:System .
+
+:hasMetadata rdf:type owl:ObjectProperty ;
+             
+             rdfs:comment "Links any concept with metadata about that concept." ;
+             
+             rdfs:range :Metadata .
+:metadataType rdf:type owl:DatatypeProperty ;
+              
+              rdfs:comment "Defines the type pf the metadata value (e.g. resolution of the sensor)."@en ;
+              
+              rdfs:domain :Metadata ;
+              
+              rdfs:range xsd:string .
+
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#metadataValue
+
+:metadataValue rdf:type owl:DatatypeProperty ;
+               
+               rdfs:comment "Value of the metadata"@en ;
+               
+               rdfs:domain :Metadata ;
+               
+               rdfs:range xsd:string .
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Metadata
+
+:Metadata rdf:type owl:Class ;
+          
+          rdfs:comment "Class used to describe properties that cannot be described by QuantityKind and Units. i.e. the resolution of a sensor."@en .
+
+
 ssn:DrinkingWaterDistributionNetwork rdf:type ssn:System.
+ssn:WaterDemand rdf:type :VirtualEntity.
 ssn:Pipe rdf:type ssn:Device.
 ssn:Valve rdf:type ssn:Device.
 ssn:Pump rdf:type ssn:Device.
