@@ -17,8 +17,19 @@
 :VirtualEntity rdf:type owl:Class ;
                
                rdfs:subClassOf :Entity ;
+                rdfs:comment """Computational or data element representing a Physical Entity. Virtual Entities can be either Active or Passive Digital Entities.
+Physical Entities are represented in the digital world by a Virtual Entity. This
+term is also referred to as â€œvirtual counterpartâ€ in the literature (RoÂ¨mer et al. 2002),
+but using the same root term â€œentityâ€ in both concepts clearer shows the relationship
+of these concepts. There are many kinds of digital representations of Physical
+Entities: 3D models, avatars, database entries, objects (or instances of a class in an
+object-oriented programming language), and even a social-network account could
+be viewed as such a representation, because it digitally represents certain aspects of
+its human owner, such as a photograph or a list of his hobbies.
+
+Enabling Things to Talk: Designing IoT solutions with the IoT Architectural Reference Model, Alessandro Bassi, Martin Bauer, Martin Fiedler, Thorsten Kramp,
+Rob van Kranenburg, Sebastian Lange, Stefan Meissner""" .
                
-               rdfs:comment """Computational or data element representing a Physical Entity. Virtual Entities can be either Active or Passive Digital Entities.
 ssn:System rdf:type owl:Class .
 
 ssn:Device rdf:type owl:Class ;
