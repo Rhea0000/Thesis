@@ -28,6 +28,7 @@ ssn:Container owl:equivalentClass ssn:Tank.
 
 # Link properties to classes
 ssn:Material rdfs:type :metadataType;
+
     rdfs:domain ssn:Pipe .
 ssn:Diameter rdf:type :metadataValue;
     rdfs:domain ssn:Pipe .
@@ -65,4 +66,3 @@ ssn:SpeedSettings rdf:type :metadataValue;
     rdfs:domain ssn:Pump.
 ssn:Settings rdf:type :metadataType;
     rdfs:domain ssn:Valve.
-
