@@ -26,7 +26,6 @@ Entities: 3D models, avatars, database entries, objects (or instances of a class
 object-oriented programming language), and even a social-network account could
 be viewed as such a representation, because it digitally represents certain aspects of
 its human owner, such as a photograph or a list of his hobbies.
-
 Enabling Things to Talk: Designing IoT solutions with the IoT Architectural Reference Model, Alessandro Bassi, Martin Bauer, Martin Fiedler, Thorsten Kramp,
 Rob van Kranenburg, Sebastian Lange, Stefan Meissner""" .
                
