@@ -13,6 +13,7 @@
 @prefix iot-lite: <http://purl.oclc.org/NET/UNIS/fiware/iot-lite#> .
 @prefix qu-rec20: <http://purl.org/NET/ssnx/qu/qu-rec20#> .
 @base <http://purl.oclc.org/NET/UNIS/fiware/iot-lite#> .
+@prefix wd: <http://example.org/drinking-water-distribution-network#> .
 
 :VirtualEntity rdf:type owl:Class ;
                
@@ -67,18 +68,18 @@ ssn:Device rdf:type owl:Class ;
           rdfs:comment "Class used to describe properties that cannot be described by QuantityKind and Units. i.e. the resolution of a sensor."@en .
 
 
-ssn:DrinkingWaterDistributionNetwork rdf:type ssn:System.
-ssn:WaterDemand rdf:type :VirtualEntity.
-ssn:Pipe rdf:type ssn:Device.
-ssn:Valve rdf:type ssn:Device.
-ssn:Pump rdf:type ssn:Device.
-ssn:Tank rdf:type ssn:Device.
-ssn:Reservoir rdf:type ssn:Device.
-ssn:WaterStorage rdf:equivalentClass ssn:Reservoir .
-ssn:Channel owl:equivalentClass ssn:Pipe. 
-ssn:Faucet owl:equivalentClass ssn:Valve.
-ssn:WaterPump owl:equivalentClass ssn:Pump.
-ssn:Container owl:equivalentClass ssn:Tank.
+wd:DrinkingWaterDistributionNetwork rdf:type ssn:System.
+wd:WaterDemand rdf:type :VirtualEntity.
+wd:Pipe rdf:type iot-lite:Object.
+wd:Valve rdf:type iot-lite:Object.
+wd:Pump rdf:type iot-lite:Object.
+wd:Tank rdf:type iot-lite:Object.
+wd:Reservoir rdf:type iot-lite:Object.
+wd:WaterStorage rdf:equivalentClass ssn:Reservoir.
+wd:Channel owl:equivalentClass ssn:Pipe. 
+wd:Faucet owl:equivalentClass ssn:Valve.
+wd:WaterPump owl:equivalentClass ssn:Pump.
+wd:Container owl:equivalentClass ssn:Tank.
 
 # Link properties to classes
 ssn:Material rdfs:type :metadataType;
