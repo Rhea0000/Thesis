@@ -82,40 +82,40 @@ wd:WaterPump owl:equivalentClass ssn:Pump.
 wd:Container owl:equivalentClass ssn:Tank.
 
 # Link properties to classes
-ssn:Material rdfs:type :metadataType;
+ssn:Material rdfs:type iot-lite:Attribute;
     rdfs:domain ssn:Pipe .
-ssn:Diameter rdf:type :metadataValue;
+ssn:Diameter rdf:type iot-lite:Attribute;
     rdfs:domain ssn:Pipe .
-ssn:Length rdf:type :metadataValue;
+ssn:Length rdf:type iot-lite:Attribute;
     rdfs:domain ssn:Pipe .
-ssn:RoughnessCoefficient rdf:type :metadataValue;
+ssn:RoughnessCoefficient rdf:type iot-lite:Attribute;
     rdfs:domain ssn:Pipe .
-ssn:Status rdf:type :metadataType;
+ssn:Status rdf:type iot-lite:Attribute;
     rdfs:domain ssn:Pipe .
 
-ssn:Type rdf:type :metadataType;
+ssn:Type rdf:type iot-lite:Attribute;
     rdfs:domain ssn:Pump,
                 ssn:Valve,
                 ssn:Reservoir .
-ssn:Capacity rdf:type :metadataType;
+ssn:Capacity rdf:type iot-lite:Attribute;
     rdfs:domain ssn:Pump,
                 ssn:Reservoir,
                 ssn:Tank .
-ssn:PowerConsumption rdf:type :metadataValue;
+ssn:PowerConsumption rdf:type iot-lite:Attribute;
     rdfs:domain ssn:Pump .
-ssn:OperationalStatus rdf:type :metadataType;
+ssn:OperationalStatus rdf:type iot-lite:Attribute;
     rdfs:domain ssn:Pump,
                 ssn:Valve.
-ssn:SurfaceArea rdf:type :metadataValue;
+ssn:SurfaceArea rdf:type iot-lite:Attribute;
     rdfs:domain ssn:Reservoir .
-ssn:WaterQuality rdf:type :metadataType;
+ssn:WaterQuality rdf:type iot-lite:Attribute;
     rdfs:domain ssn:Reservoir,
                 ssn:Tank.
-ssn:MinimumWaterLevels rdf:type :metadataValue;
+ssn:MinimumWaterLevels rdf:type iot-lite:Attribute;
     rdfs:domain ssn:Tank.
-ssn:MaximumWaterLevels rdf:type :metadataValue;
+ssn:MaximumWaterLevels rdf:type iot-lite:Attribute;
     rdfs:domain ssn:Tank.
-ssn:SpeedSettings rdf:type :metadataValue;
+ssn:SpeedSettings rdf:type iot-lite:Attribute;
     rdfs:domain ssn:Pump.
-ssn:Settings rdf:type :metadataType;
+ssn:Settings rdf:type iot-lite:Attribute;
     rdfs:domain ssn:Valve.
