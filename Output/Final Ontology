@@ -46,7 +46,7 @@ wd:Valve rdf:type iot-lite:Object.
 wd:Pump rdf:type iot-lite:Object.
 wd:Tank rdf:type iot-lite:Object.
 wd:Reservoir rdf:type iot-lite:Object.
-wd:WaterStorage rdf:equivalentClass ssn:Reservoir.
+wd:WaterStorage rdf:equivalentClass wd:Reservoir.
 wd:Channel owl:equivalentClass wd:Pipe. 
 wd:Faucet owl:equivalentClass wd:Valve.
 wd:WaterPump owl:equivalentClass wd:Pump.
