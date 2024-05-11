@@ -42,51 +42,42 @@ ssn:Device rdf:type owl:Class ;
 wd:DrinkingWaterDistributionNetwork rdf:type ssn:System.
 wd:WaterDemand rdf:type :VirtualEntity.
 wd:Pipe rdf:type iot-lite:Object;
+  iot-lite:hasAttribute wd:Material;
+  iot-lite:hasAttribute wd:Diameter;
+  iot-lite:hasAttribute wd:Length; 
+  iot-lite:hasAttribute wd:RoughnessCoefficient;
+  iot-lite:hasAttribute wd:Status. 
 wd:Valve rdf:type iot-lite:Object.
-wd:Pump rdf:type iot-lite:Object.
-wd:Tank rdf:type iot-lite:Object.
-wd:Reservoir rdf:type iot-lite:Object.
-wd:WaterStorage rdf:equivalentClass wd:Reservoir.
+  iot-lite:hasAttribute wd:Status;
+  iot-lite:hasAttribute wd:Type;
+  iot-lite:hasAttribute wd:OperationalStatus;
+  iot-lite:hasAttribute wd:Settings.
+
+wd:Pump rdf:type iot-lite:Object;
+  iot-lite:hasAttribute wd:PowerConsumption;
+  iot-lite:hasAttribute wd:OperationalStatus;
+  iot-lite:hasAttribute wd:Capacity;
+  iot-lite:hasAttribute wd:Type;
+  iot-lite:hasAttribute wd:SpeedSettings. 
+  
+wd:Tank rdf:type iot-lite:Object;
+  iot-lite:hasAttribute wd:Capacity;
+  iot-lite:hasAttribute wd:WaterQuality;
+  iot-lite:hasAttribute wd:MinimumWaterLevels;
+  iot-lite:hasAttribute wd:MaximumWaterLevels. 
+
+wd:Reservoir rdf:type iot-lite:Object;
+  iot-lite:hasAttribute wd:Type;
+  iot-lite:hasAttribute wd:Capacity;
+  iot-lite:hasAttribute wd:SurfaceArea;
+  iot-lite:hasAttribute wd:WaterQuality. 
+  
+wd:WaterStorage rdf:equivalentClass wd:Reservoir. 
+
 wd:Channel owl:equivalentClass wd:Pipe. 
+
 wd:Faucet owl:equivalentClass wd:Valve.
+
 wd:WaterPump owl:equivalentClass wd:Pump.
+
 wd:Container owl:equivalentClass wd:Tank.
-
-# Link properties to classes
-wd:Material rdfs:type iot-lite:Attribute;
-    rdfs:domain wd:Pipe .
-wd:Diameter rdf:type iot-lite:Attribute;
-    rdfs:domain wd:Pipe .
-wd:Length rdf:type iot-lite:Attribute;
-    rdfs:domain wd:Pipe .
-wd:RoughnessCoefficient rdf:type iot-lite:Attribute;
-    rdfs:domain wd:Pipe .
-wd:Status rdf:type iot-lite:Attribute;
-    rdfs:domain wd:Pipe .
-
-wd:Type rdf:type iot-lite:Attribute;
-    rdfs:domain wd:Pump,
-                wd:Valve,
-                wd:Reservoir .
-wd:Capacity rdf:type iot-lite:Attribute;
-    rdfs:domain wd:Pump,
-                wd:Reservoir,
-                wd:Tank .
-wd:PowerConsumption rdf:type iot-lite:Attribute;
-    rdfs:domain wd:Pump .
-wd:OperationalStatus rdf:type iot-lite:Attribute;
-    rdfs:domain wd:Pump,
-                wd:Valve.
-wd:SurfaceArea rdf:type iot-lite:Attribute;
-    rdfs:domain wd:Reservoir .
-wd:WaterQuality rdf:type iot-lite:Attribute;
-    rdfs:domain wd:Reservoir,
-                wd:Tank.
-wd:MinimumWaterLevels rdf:type iot-lite:Attribute;
-    rdfs:domain wd:Tank.
-wd:MaximumWaterLevels rdf:type iot-lite:Attribute;
-    rdfs:domain wd:Tank.
-wd:SpeedSettings rdf:type iot-lite:Attribute;
-    rdfs:domain wd:Pump.
-wd:Settings rdf:type iot-lite:Attribute;
-    rdfs:domain wd:Valve.
