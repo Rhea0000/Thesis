@@ -16,7 +16,6 @@
 @prefix wd: <http://example.org/drinking-water-distribution-network#> .
 
 :VirtualEntity rdf:type owl:Class ;
-               
                rdfs:subClassOf :Entity ;
                 rdfs:comment """Computational or data element representing a Physical Entity. Virtual Entities can be either Active or Passive Digital Entities.
 Physical Entities are represented in the digital world by a Virtual Entity. This
@@ -32,90 +31,62 @@ Rob van Kranenburg, Sebastian Lange, Stefan Meissner""" .
                
 ssn:System rdf:type owl:Class .
 
+iot-lite:Object rdf:type owl:Class ;
+        
+        rdfs:comment "IoT entity"@en .
+
 ssn:Device rdf:type owl:Class ;
            
            rdfs:subClassOf ssn:System .
 
-:hasMetadata rdf:type owl:ObjectProperty ;
-             
-             rdfs:comment "Links any concept with metadata about that concept." ;
-             
-             rdfs:range :Metadata .
-:metadataType rdf:type owl:DatatypeProperty ;
-              
-              rdfs:comment "Defines the type pf the metadata value (e.g. resolution of the sensor)."@en ;
-              
-              rdfs:domain :Metadata ;
-              
-              rdfs:range xsd:string .
-
-
-
-###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#metadataValue
-
-:metadataValue rdf:type owl:DatatypeProperty ;
-               
-               rdfs:comment "Value of the metadata"@en ;
-               
-               rdfs:domain :Metadata ;
-               
-               rdfs:range xsd:string .
-
-###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Metadata
-
-:Metadata rdf:type owl:Class ;
-          
-          rdfs:comment "Class used to describe properties that cannot be described by QuantityKind and Units. i.e. the resolution of a sensor."@en .
-
-
 wd:DrinkingWaterDistributionNetwork rdf:type ssn:System.
 wd:WaterDemand rdf:type :VirtualEntity.
-wd:Pipe rdf:type iot-lite:Object.
+wd:Pipe rdf:type iot-lite:Object;
 wd:Valve rdf:type iot-lite:Object.
 wd:Pump rdf:type iot-lite:Object.
 wd:Tank rdf:type iot-lite:Object.
 wd:Reservoir rdf:type iot-lite:Object.
 wd:WaterStorage rdf:equivalentClass ssn:Reservoir.
-wd:Channel owl:equivalentClass ssn:Pipe. 
-wd:Faucet owl:equivalentClass ssn:Valve.
-wd:WaterPump owl:equivalentClass ssn:Pump.
-wd:Container owl:equivalentClass ssn:Tank.
+wd:Channel owl:equivalentClass wd:Pipe. 
+wd:Faucet owl:equivalentClass wd:Valve.
+wd:WaterPump owl:equivalentClass wd:Pump.
+wd:Container owl:equivalentClass wd:Tank.
 
 # Link properties to classes
-ssn:Material rdfs:type iot-lite:Attribute;
-    rdfs:domain ssn:Pipe .
-ssn:Diameter rdf:type iot-lite:Attribute;
-    rdfs:domain ssn:Pipe .
-ssn:Length rdf:type iot-lite:Attribute;
-    rdfs:domain ssn:Pipe .
-ssn:RoughnessCoefficient rdf:type iot-lite:Attribute;
-    rdfs:domain ssn:Pipe .
-ssn:Status rdf:type iot-lite:Attribute;
-    rdfs:domain ssn:Pipe .
+wd:Material rdfs:type iot-lite:Attribute;
+    rdfs:domain wd:Pipe .
+wd:Diameter rdf:type iot-lite:Attribute;
+    rdfs:domain wd:Pipe .
+wd:Length rdf:type iot-lite:Attribute;
+    rdfs:domain wd:Pipe .
+wd:RoughnessCoefficient rdf:type iot-lite:Attribute;
+    rdfs:domain wd:Pipe .
+wd:Status rdf:type iot-lite:Attribute;
+    rdfs:domain wd:Pipe .
 
-ssn:Type rdf:type iot-lite:Attribute;
-    rdfs:domain ssn:Pump,
-                ssn:Valve,
-                ssn:Reservoir .
-ssn:Capacity rdf:type iot-lite:Attribute;
-    rdfs:domain ssn:Pump,
-                ssn:Reservoir,
-                ssn:Tank .
-ssn:PowerConsumption rdf:type iot-lite:Attribute;
-    rdfs:domain ssn:Pump .
-ssn:OperationalStatus rdf:type iot-lite:Attribute;
-    rdfs:domain ssn:Pump,
-                ssn:Valve.
-ssn:SurfaceArea rdf:type iot-lite:Attribute;
-    rdfs:domain ssn:Reservoir .
-ssn:WaterQuality rdf:type iot-lite:Attribute;
-    rdfs:domain ssn:Reservoir,
-                ssn:Tank.
-ssn:MinimumWaterLevels rdf:type iot-lite:Attribute;
-    rdfs:domain ssn:Tank.
-ssn:MaximumWaterLevels rdf:type iot-lite:Attribute;
-    rdfs:domain ssn:Tank.
-ssn:SpeedSettings rdf:type iot-lite:Attribute;
-    rdfs:domain ssn:Pump.
-ssn:Settings rdf:type iot-lite:Attribute;
-    rdfs:domain ssn:Valve.
+wd:Type rdf:type iot-lite:Attribute;
+    rdfs:domain wd:Pump,
+                wd:Valve,
+                wd:Reservoir .
+wd:Capacity rdf:type iot-lite:Attribute;
+    rdfs:domain wd:Pump,
+                wd:Reservoir,
+                wd:Tank .
+wd:PowerConsumption rdf:type iot-lite:Attribute;
+    rdfs:domain wd:Pump .
+wd:OperationalStatus rdf:type iot-lite:Attribute;
+    rdfs:domain wd:Pump,
+                wd:Valve.
+wd:SurfaceArea rdf:type iot-lite:Attribute;
+    rdfs:domain wd:Reservoir .
+wd:WaterQuality rdf:type iot-lite:Attribute;
+    rdfs:domain wd:Reservoir,
+                wd:Tank.
+wd:MinimumWaterLevels rdf:type iot-lite:Attribute;
+    rdfs:domain wd:Tank.
+wd:MaximumWaterLevels rdf:type iot-lite:Attribute;
+    rdfs:domain wd:Tank.
+wd:SpeedSettings rdf:type iot-lite:Attribute;
+    rdfs:domain wd:Pump.
+wd:Settings rdf:type iot-lite:Attribute;
+    rdfs:domain wd:Valve.
