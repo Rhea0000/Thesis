@@ -29,15 +29,11 @@ its human owner, such as a photograph or a list of his hobbies.
 Enabling Things to Talk: Designing IoT solutions with the IoT Architectural Reference Model, Alessandro Bassi, Martin Bauer, Martin Fiedler, Thorsten Kramp,
 Rob van Kranenburg, Sebastian Lange, Stefan Meissner""" .
                
-ssn:System rdf:type owl:Class .
+ssn:System rdf:type owl:Thing.
 
 iot-lite:Object rdf:type owl:Class ;
         
         rdfs:comment "IoT entity"@en .
-
-ssn:Device rdf:type owl:Class ;
-           
-           rdfs:subClassOf ssn:System .
 
 wd:DrinkingWaterDistributionNetwork rdf:type ssn:System.
 wd:WaterDemand rdf:type :VirtualEntity.
