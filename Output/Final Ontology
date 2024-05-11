@@ -35,7 +35,12 @@ iot-lite:Object rdf:type owl:Class ;
         
         rdfs:comment "IoT entity"@en .
 
-wd:DrinkingWaterDistributionNetwork rdf:type ssn:System.
+wd:DrinkingWaterDistributionNetwork rdf:type ssn:System;
+  rdf:haspart wd:Pipe;
+  rdf:haspart wd:Valve;
+  rdf:haspart wd:Pump;
+  rdf:haspart wd:Tank;
+  rdf:haspart wd:Reservoir.
 wd:WaterDemand rdf:type :VirtualEntity.
 wd:Pipe rdf:type iot-lite:Object;
   iot-lite:hasAttribute wd:Material;
