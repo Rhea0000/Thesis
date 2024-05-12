@@ -7,9 +7,14 @@ The LLM plays an important role in AI development, it offers a great convenience
 The Excel file for progress review: (SLR + Result)
 https://docs.google.com/spreadsheets/d/15oEyAJER5Bi6Z1DWzoBaYncC4WItkFLvczZcJxmFTug/edit#gid=1494574796
 
-Below is a flowchart visualize the logic behind the code:
+Below are flowcharts visualize the logic behind the code:
 
-![FLOWCHART 3](https://github.com/Rhea0000/Thesis/assets/145769931/414089a1-4931-483e-abdb-2ea7310006ee)
+RAG Chain:
+![Flowchart-RAG](https://github.com/Rhea0000/Thesis/assets/145769931/bc61cdd3-0865-44ca-ba76-8d2729e55dee)
+
+Pipeline:
+![Flowchart-pipeline](https://github.com/Rhea0000/Thesis/assets/145769931/8153ecba-0c35-42ec-864d-8b03f429079b)
+
 
 # Instructions
 The file "Python code" contains all the information for the reuse. 
