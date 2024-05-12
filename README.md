@@ -54,9 +54,4 @@ If you encounter a 500 server error, it may indicate that the LLM is unable to p
 For further assistance, please open an issue in this repository.
 
 # Reference
-@misc{OpenSourceLLMs,
-  title = {OpenSourceLLMs},
-  year = {2024},
-  url = {\url{https://colab.research.google.com/drive/1cW01yqNxKqYHpU7uvi5UfUsNnbfxVw7R}},
-  note = {Accessed: 2024-04-14}
-}
+(n.d.). Quickstart. LangChain. https://python.langchain.com/v0.1/docs/use_cases/question_answering/quickstart/
