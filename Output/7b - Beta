@@ -1,0 +1,49 @@
+# Define prefixes
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dwdn: <http://example.org/ontology/dwdn#> .
+
+# Create classes and relationships
+dwdn:Pipe rdf:type owl:Class;
+    rdfs:subClassOf dwdn:Entity;
+    dwdn:partOf dwdn:Reservoir;
+    dwdn:partOf dwdn:Pump;
+    dwdn:partOf dwdn:Valve;
+    dwdn:partOf dwdn:Junction;
+    dwdn:partOf dwdn:Manhole.
+
+dwdn:Reservoir rdf:type owl:Class;
+    rdfs:subClassOf dwdn:Entity;
+    owl:hasPart dwdn:Pipe;
+    owl:hasPart dwdn:Tank.
+
+dwdn:Pump rdf:type owl:Class;
+    rdfs:subClassOf dwdn:Entity;
+    owl:hasPart dwdn:Motor;
+    owl:hasPart dwdn:Impeller.
+
+dwdn:Valve rdf:type owl:Class;
+    rdfs:subClassOf dwdn:Entity;
+    owl:hasPart dwdn:Gear;
+    owl:hasPart dwdn:Seat.
+
+dwdn:Hydrant rdf:type owl:Class;
+    rdfs:subClassOf dwdn:Entity;
+    owl:hasPart dwdn:Valve.
+    rdfs:subClassOf dwdn:Entity;
+    owl:hasPart dwdn:Pump.
+
+dwdn:Junction rdf:type owl:Class;
+    rdfs:subClassOf dwdn:Entity;
+    owl:hasPart dwdn:Pipe;
+    owl:hasPart dwdn:Valve.
+
+dwdn:Manhole rdf:type owl:Class;
+    rdfs:subClassOf dwdn:Entity;
+    owl:hasPart dwdn:Ladder;
+    owl:hasPart dwdn:Cover.
+
+# No conflicting relationships exist, so no further relationships are required.
+
+This ontology schema defines classes for the entities in the drinking water distribution network domain and establishes relationships between them based on the input provided. The prefixes rdf, rdfs, owl, and dwdn are used for readability and organization. This ontology can be further expanded and refined as needed to accurately represent the domain.
