@@ -5,15 +5,17 @@ This Github repository is created for the Master thesis project – Creating ont
 The advanced capabilities of Large Language Models (LLMs) have proven beneficial in various domains, significantly improving the efficiency of text processing and text generation. However, there is a lack of research into their application in the field of ontology learning. Currently, majority of ontologies are created manually, which is time consuming and labour intensive.
 Therefore, this project focuses on the use of LLMs for ontology learning, bridging the gap by using manual ontology creation method as a basis to facilitate automatic ontology creation. The project uses the BASIC Retrieval Augmented Generation (RAG) to avoid the limitation of hallucination and has experimented with four LLMs: (gpt-4-0125-preview (gpt-4), gpt-3.5-turbo-0125 (gpt-3-turbo), gpt-4-turbo-2024-04-09 (gpt-4-turbo), huggingfaceh4/zephyr-7b-beta (7b-beta). The code file contains all the code to reproduce the result and the output for each model is available at "Output" folder. 
 
-Below are flowcharts visualize the logic behind the code:
+Below are flowcharts visualize the logic behind the RAG and query pipeline:
 
-RAG Chain:
+RAG:
 
-![Flowchart-RAG](https://github.com/Rhea0000/Thesis/assets/145769931/bc61cdd3-0865-44ca-ba76-8d2729e55dee)
+![Flowchart-rag](https://github.com/Rhea0000/Thesis/assets/145769931/06890aec-822c-4c1b-b449-822c08a6cac0)
+
 
 Pipeline:
 
-![Flowchart-pipeline](https://github.com/Rhea0000/Thesis/assets/145769931/8153ecba-0c35-42ec-864d-8b03f429079b)
+![flowchart-pipeline](https://github.com/Rhea0000/Thesis/assets/145769931/51fba993-8a2b-4347-a7e4-2df38d7cf966)
+
 
 
 # Instructions
