@@ -14,7 +14,17 @@
 @prefix qu-rec20: <http://purl.org/NET/ssnx/qu/qu-rec20#> .
 @base <http://purl.oclc.org/NET/UNIS/fiware/iot-lite#> .
 @prefix wd: <http://example.org/drinking-water-distribution-network#> .
+@prefix iot-l-ins: <http://purl.oclc.org/NET/UNIS/iot-lite/iot-liteInstance#> .
 
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Attribute
+
+:Attribute rdf:type owl:Class ;
+           
+           rdfs:comment "An attribute of an IoT object that can be exposed by an IoT service (i.e. a room (IoT Object) has a temperature (Attribute), that can be exposed by a temperature sensor (IoT device)."@en .
+
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#VirtualEntity
 :VirtualEntity rdf:type owl:Class ;
                rdfs:subClassOf :Entity ;
                 rdfs:comment """Computational or data element representing a Physical Entity. Virtual Entities can be either Active or Passive Digital Entities.
@@ -31,9 +41,30 @@ Rob van Kranenburg, Sebastian Lange, Stefan Meissner""" .
                
 ssn:System rdf:type owl:Thing.
 
-iot-lite:Object rdf:type owl:Class ;
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Entity
+
+:Entity rdf:type owl:Class ;
+        
+        owl:equivalentClass :Object ;
+        
+        rdfs:comment """Any object that is relevant from a user or application perspective. 
+(IoT-A Definition)"""@en .
+
+###  http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Object
+
+:Object rdf:type owl:Class ;
         
         rdfs:comment "IoT entity"@en .
+
+:Object rdf:type owl:Class ;
+        
+        rdfs:comment "IoT entity"@en .
+
+:Entity rdf:type owl:Class ;
+        
+        owl:equivalentClass :Object;
+        
+        rdfs:comment """Any object that is relevant from a user or application perspective. (IoT-A Definition)"""@en .
 
 wd:DrinkingWaterDistributionNetwork rdf:type ssn:System;
   rdf:haspart wd:Pipe;
@@ -42,37 +73,55 @@ wd:DrinkingWaterDistributionNetwork rdf:type ssn:System;
   rdf:haspart wd:Tank;
   rdf:haspart wd:Reservoir.
 wd:WaterDemand rdf:type :VirtualEntity.
-wd:Pipe rdf:type iot-lite:Object;
+wd:Pipe rdf:type :Object;
   iot-lite:hasAttribute wd:Material;
   iot-lite:hasAttribute wd:Diameter;
   iot-lite:hasAttribute wd:Length; 
   iot-lite:hasAttribute wd:RoughnessCoefficient;
   iot-lite:hasAttribute wd:Status. 
-wd:Valve rdf:type iot-lite:Object;
+wd:Valve rdf:type :Object;
   iot-lite:hasAttribute wd:Status;
   iot-lite:hasAttribute wd:Type;
   iot-lite:hasAttribute wd:OperationalStatus;
   iot-lite:hasAttribute wd:Settings.
 
-wd:Pump rdf:type iot-lite:Object;
+wd:Pump rdf:type :Object;
   iot-lite:hasAttribute wd:PowerConsumption;
   iot-lite:hasAttribute wd:OperationalStatus;
   iot-lite:hasAttribute wd:Capacity;
   iot-lite:hasAttribute wd:Type;
   iot-lite:hasAttribute wd:SpeedSettings. 
   
-wd:Tank rdf:type iot-lite:Object;
+wd:Tank rdf:type :Object;
   iot-lite:hasAttribute wd:Capacity;
   iot-lite:hasAttribute wd:WaterQuality;
   iot-lite:hasAttribute wd:MinimumWaterLevels;
   iot-lite:hasAttribute wd:MaximumWaterLevels. 
 
-wd:Reservoir rdf:type iot-lite:Object;
+wd:Reservoir rdf:type :Object;
   iot-lite:hasAttribute wd:Type;
   iot-lite:hasAttribute wd:Capacity;
   iot-lite:hasAttribute wd:SurfaceArea;
   iot-lite:hasAttribute wd:WaterQuality. 
-  
+
+wd:Type rdf:type :Attribute.
+wd:Capacity rdf:type :Attribute.
+wd:SurfaceArea rdf:type :Attribute.
+wd:WaterQuality rdf:type :Attribute.
+wd:MinimumWaterLevels rdf:type :Attribute.
+wd:MaximumWaterLevels rdf:type :Attribute.
+wd:PowerConsumption rdf:type :Attribute.
+wd:OperationalStatus rdf:type :Attribute.
+wd:SpeedSettings rdf:type :Attribute.
+wd:Material rdf:type :Attribute.
+wd:Diameter rdf:type :Attribute.
+wd:Length rdf:type :Attribute.
+wd:RoughnessCoefficient rdf:type :Attribute.
+wd:Status rdf:type :Attribute.
+wd:OperationalStatus rdf:type :Attribute.
+wd:Settings rdf:type :Attribute.
+
+
 wd:WaterStorage rdf:equivalentClass wd:Reservoir. 
 
 wd:Channel owl:equivalentClass wd:Pipe. 
