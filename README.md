@@ -1,5 +1,5 @@
 # Thesis background
-This Github repository is created for the Master thesis project – Creating ontology in the drink water distribution network domain. The author is Rhea Huang and from University of Amsterdam (y1kelinblue@gmail.com). 
+This Github repository is created for the Master thesis project – Large Language Model for Ontology Learning in the Drink Water Distribution Network domain. The author is Rhea Huang and from University of Amsterdam (y1kelinblue@gmail.com). 
 
 # Introduction
 The advanced capabilities of Large Language Models (LLMs) have proven beneficial in various domains, significantly improving the efficiency of text processing and text generation. However, there is a lack of research into their application in the field of ontology learning. Currently, the majority of ontologies are created manually, which is time consuming and labour intensive.
