@@ -80,7 +80,6 @@ wd:Pipe rdf:type :Object;
   iot-lite:hasAttribute wd:RoughnessCoefficient;
   iot-lite:hasAttribute wd:Status. 
 wd:Valve rdf:type :Object;
-  iot-lite:hasAttribute wd:Status;
   iot-lite:hasAttribute wd:Type;
   iot-lite:hasAttribute wd:OperationalStatus;
   iot-lite:hasAttribute wd:Settings.
@@ -118,7 +117,6 @@ wd:Diameter rdf:type :Attribute.
 wd:Length rdf:type :Attribute.
 wd:RoughnessCoefficient rdf:type :Attribute.
 wd:Status rdf:type :Attribute.
-wd:OperationalStatus rdf:type :Attribute.
 wd:Settings rdf:type :Attribute.
 
 
