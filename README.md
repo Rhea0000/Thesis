@@ -12,7 +12,7 @@ RAG:
 ![Flowchart-rag](https://github.com/Rhea0000/Thesis/assets/145769931/06890aec-822c-4c1b-b449-822c08a6cac0)
 
 
-Pipeline:
+Query Pipeline:
 
 ![flowchart-pipeline](https://github.com/Rhea0000/Thesis/assets/145769931/51fba993-8a2b-4347-a7e4-2df38d7cf966)
 
