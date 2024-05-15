@@ -61,4 +61,4 @@ If you encounter a 500 server error, it may indicate that the LLM is unable to p
 For further assistance, please open an issue in this repository.
 
 # Reference
-(n.d.). Quickstart. LangChain. https://python.langchain.com/v0.1/docs/use_cases/question_answering/quickstart/
+LangChain. [n. d.]. Question Answering Quickstart. https://python.langchain.com/v0.1/docs/use_cases/question_answering/quickstart/. Accessed: 2024-05-15.
