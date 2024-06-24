@@ -1,1 +1,69 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix wd: <http://example.org/drinking-water-distribution-network#> .
 
+wd:DrinkingWaterDistributionNetwork rdf:type owl:Class .
+wd:Pipe rdf:type owl:Class ;
+    rdfs:subClassOf wd:DrinkingWaterDistributionNetwork .
+wd:Valve rdf:type owl:Class ;
+    rdfs:subClassOf wd:DrinkingWaterDistributionNetwork .
+wd:Pump rdf:type owl:Class ;
+    rdfs:subClassOf wd:DrinkingWaterDistributionNetwork .
+wd:Tank rdf:type owl:Class ;
+    rdfs:subClassOf wd:DrinkingWaterDistributionNetwork .
+wd:Reservoir rdf:type owl:Class ;
+    rdfs:subClassOf wd:DrinkingWaterDistributionNetwork .
+wd:Sensor rdf:type owl:Class ;
+    rdfs:subClassOf wd:DrinkingWaterDistributionNetwork .
+wd:FireHydrant rdf:type owl:Class ;
+    rdfs:subClassOf wd:DrinkingWaterDistributionNetwork .
+wd:PressureBooster rdf:type owl:Class ;
+    rdfs:subClassOf wd:DrinkingWaterDistributionNetwork .
+wd:CustomerConnection  rdf:type owl:Class ;
+    rdfs:subClassOf wd:DrinkingWaterDistributionNetwork .
+wd:WaterDemand rdf:type owl:Class.
+
+# Equivalent Classes
+wd:WaterPump rdf:type owl:Class ;
+    owl:equivalentClass wd:Pump.
+
+# Link properties to classes
+wd:Material rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Pipe .
+wd:Diameter rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Pipe .
+wd:Length rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Pipe .
+wd:RoughnessCoefficient rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Pipe .
+
+wd:Type rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Pump,
+                wd:Valve,
+                wd:Reservoir .
+wd:Capacity rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Pump,
+                wd:Reservoir,
+                wd:Tank .
+wd:PowerConsumption rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Pump .
+wd:OperationalStatus rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Pump,
+                wd:Valve .
+wd:SurfaceArea rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Reservoir .
+wd:WaterQuality rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Reservoir,
+                wd:Tank .
+wd:MinimumWaterLevels rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Tank .
+wd:MaximumWaterLevels rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Tank .
+
+wd:Pressure rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Pipe, wd:Pump, wd:Valve, wd:Reservoir, wd:Tank, wd:FireHydrant, wd:PressureBooster, wd:CustomerConnection, wd:Sensor .
+wd:Flow rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Pipe, wd:Pump, wd:Valve, wd:Reservoir, wd:Tank, wd:FireHydrant, wd:PressureBooster, wd:CustomerConnection, wd:Sensor .
+wd:Conductivity rdf:type owl:DatatypeProperty ;
+    rdfs:domain wd:Sensor .
