@@ -14,8 +14,7 @@ RAG:
 
 Query Pipeline:
 
-![flowchart-pipeline](https://github.com/Rhea0000/Thesis/assets/145769931/51fba993-8a2b-4347-a7e4-2df38d7cf966)
-
+![FLOWCHART](https://github.com/Rhea0000/Thesis/assets/145769931/26b9214c-5e39-45c6-9bc8-cf433fe72a6d)
 
 
 # Instructions
